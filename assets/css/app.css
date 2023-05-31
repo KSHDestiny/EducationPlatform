@@ -13101,12 +13101,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-image: url("/assets/img/bg.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 .title-font {
   font-family: "Dancing Script", cursive !important;
 }
