@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&family=Courgette&family=Cormorant&display=swap');
+
+
+$primary : #343a40;
+$secondary : #e2e2e2;
+$body-color : $secondary;
+$body-bg : #bab3b3;
+$font-family-base : 'Cormorant', serif;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 7
+);
+
+$font-size-base: 1.2rem;
+
+
+$carousel-control-prev-icon-bg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#343a40" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>');
+$carousel-control-next-icon-bg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#343a40" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>');
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// customize
+body{
+    background-image: url('/assets/img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.title-font{
+  font-family : 'Dancing Script', cursive !important;
+}
+
+.sub-title-font {
+  font-family: 'Courgette', cursive;
+}
+
+.card-body{
+  background: $secondary;
+  color: $primary;
+  margin-bottom: 10px;
+}
+
+.card-contact-body{
+  background: $primary;
+  color: $secondary;
+  height: 175px;
+  margin-bottom: 0px;
+}
+
+.animation{
+  animation: telegramAnimation 8s linear infinite both;
+}
+
+
+@keyframes telegramAnimation {
+  0% {
+    transform: translateX(0) translateY(0);
+    font-size: 20px;
+    color: skyblue;
+  }
+  25% {
+    transform: translateX(30%) translateY(0) rotateZ(0deg);
+    transition: 3s;
+    font-size: 2rem;
+  }
+  50% {
+    transform: translateX(90%) translateY(100%) rotateZ(10deg);
+    font-size: 3.5rem;
+    color: $primary;
+  }
+  75% {
+    transform: translateX(20%) rotateZ(-10deg);
+    font-size: 2.5rem;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotateZ(0);
+    color: skyblue;
+  }
+}
+  
